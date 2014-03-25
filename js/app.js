@@ -1,11 +1,13 @@
 function MenuCtrl($scope) {
+    
   $scope.webPages = [
       {url:'http://npr.org'},
       {url:'http://cnn.com'}
   ];
  
   $scope.addWebPage = function() {
-    $scope.webPages.push({text:$scope.webPageUrl});
+      $scope.webPages.push({url:$scope.webPageUrl});
+      $scope.webPageUrl = '';
   };
  
 
