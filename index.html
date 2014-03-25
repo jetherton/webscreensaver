@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="js/angular.js"></script>
+		<script src="js/app.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div ng-controller="MenuCtrl" id="menu">
+			<ul class="unstyled">
+				<li ng-repeat="webPage in webPages">
+					<a href="{{webPage.url}}">{{webPage.url}}</a>
+				</li>
+			</ul>
+			<form ng-submit="addWebPage()">
+				<label>Add new web page:</label>
+				<input type="text" ng-model="webPageUrl" placeholder="http://somewebpage.com">
+				<input class="btn-primary" type="submit" value="add">
+			</form>
+    </div>
+  </body>
+</html>

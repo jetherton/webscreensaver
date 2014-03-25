@@ -1,0 +1,9 @@
+#menu {
+	background: #ccc;
+	padding: 5px;
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	z-index: 100;
+	opacity: 0.8;
+}
