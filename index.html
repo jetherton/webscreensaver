@@ -6,10 +6,12 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
-    <div ng-controller="MenuCtrl" id="menu">
-			<ul class="unstyled">
+    <div id="content">
+    </div>
+    <div ng-controller="MenuCtrl" id="menu" ng-show="menuVisible">
+			<ul class="unstyled" ng-init="init()">
 				<li ng-repeat="webPage in webPages">
-					<a href="{{webPage.url}}">{{webPage.url}}</a>
+					<a href="{{webPage.url}}">{{webPage.url}}</a> - <a href="" ng-click="deleteWebpage(webPage.id)">X</a>
 				</li>
 			</ul>
 			<form ng-submit="addWebPage()">
